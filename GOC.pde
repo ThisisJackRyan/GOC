@@ -1,7 +1,8 @@
 void setup(){
-    size(800, 600s)
+  
+    size(800, 600);
 }
 
 void draw(){
-    ellipse(x, y, width, height);
+    ellipse(mouseX, mouseY, 50, 50);
 }
