@@ -16,7 +16,7 @@ class Sprite {
         fill(255);
         ellipse(pos.x, pos.y, size.x, size.y);
     }
-    
+
     void handleCollision() {
         _SM.destroy(this);
     }

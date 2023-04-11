@@ -16,9 +16,28 @@ class Player extends Sprite {
         if (down)  vel.add(new PVector(0, speed));
         // update the position by velocity
         pos.add(vel);
+
+        if(pos.x < 0 + size.x/2) pos.x = size.x/2;
+        if(pos.x > width - size.x/2) pos.x = width - size.x/2;
+        if(pos.y < 0 + size.x/2) pos.y = size.y/2;
+        if(pos.y > height - size.y/2) pos.y = height - size.y/2;
+
         // always try to decelerate
         vel.mult(0.9);
     }
+
+
+    void display() {
+        fill(200,0,200);
+        ellipse(pos.x, pos.y, size.x, size.y);
+    }
+
+    @Override
+    void handleCollision(){
+      //don't die
+    }
+
+
     void keyUp() {
         switch(key) { // key is a global value
             case 'a':
