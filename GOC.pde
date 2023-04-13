@@ -4,6 +4,8 @@ void setup() {
     size(1024, 768);
     _SM = new SpriteManager();
     _SM.spawn(new Invader(250, 50));
+    _SM.spawn(new Shooter(150, 100));
+
 }
 
 void draw() {
